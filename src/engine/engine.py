@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Pygame Engine")
+pygame.display.set_caption("The Empty Corridor")
 clock = pygame.time.Clock()
 running = True
 
