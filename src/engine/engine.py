@@ -1,16 +1,17 @@
 import pygame
 
-# This will be the main 2D game engine module
-class GameEngine:
-    def __init__(self, width=800, height=600, title="2D Game Engine"):
-        pygame.init()
-        self.screen = pygame.display.set_mode((width, height))
-        pygame.display.set_caption(title)
-        self.running = True
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Pygame Engine")
+clock = pygame.time.Clock()
+running = True
 
-    def run(self):
-        while self.running:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.running = False
-        pygame.quit()
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    screen.fill((0, 0, 0))
+    pygame.display.flip()
+    clock.tick(60)
+
+pygame.quit()
