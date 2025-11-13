@@ -10,8 +10,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    screen.fill((0, 0, 0))
-    pygame.display.flip()
-    clock.tick(60)
+            screen.fill((0, 0, 0))
+            pygame.display.toggle_fullscreen()
 
 pygame.quit()
